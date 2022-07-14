@@ -2,6 +2,7 @@
 
 const btnCollapse = document.querySelectorAll(".btn-collapse");
 
+// btn
 btnCollapse.forEach((i) => {
    i.addEventListener("click", function (e) {
       if (
@@ -10,15 +11,35 @@ btnCollapse.forEach((i) => {
       )
          return;
 
-      const contentBody =
+      const accordionContent =
          e.target.parentNode.parentNode.parentNode.querySelector(
             ".collapse-body"
          );
+      let accordionMaxHeight = accordionContent.style.maxHeight;
 
-      contentBody.classList.toggle("hidden");
+      // Condition handling
+      if (accordionMaxHeight == "0px" || accordionMaxHeight.length == 0) {
+         accordionContent.style.maxHeight = `${
+            accordionContent.scrollHeight + 32
+         }px`;
+         accordionContent.style.visibility = "visible";
+      } else {
+         accordionContent.style.maxHeight = `0px`;
+         accordionContent.style.visibility = "hidden";
+      }
+      // open-close btn
       e.target.parentNode
          .querySelector(".close-btn")
          .classList.toggle("hidden");
       e.target.parentNode.querySelector(".open-btn").classList.toggle("hidden");
    });
+});
+
+// range slider
+const rangeSlider = document.querySelector("#range-slider");
+const rangeSliderProgress = document.querySelector(".rang-slider-progress");
+rangeSlider.addEventListener("input", function () {
+   const value = this.value;
+   this.style.background = `linear-gradient(to right, #1ca27f 0%, #1ca27f ${value}%, #fff ${value}%, white 100%)`;
+   rangeSliderProgress.textContent = value;
 });

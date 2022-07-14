@@ -4,6 +4,14 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+         rel="stylesheet"
+      />
       <link
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -19,7 +27,7 @@
          href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css"
       />
       <script defer src="./src/script.js"></script>
-      <title>Doc</title>
+      <title>menu</title>
    </head>
    <body>
       <main>
@@ -35,14 +43,16 @@
                   <p class="font-bold">Pair</p>
                   <div class="btn-collapse">
                      <i
-                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn"
+                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
                      ></i>
                      <i
-                        class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn hidden"
+                        class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn"
                      ></i>
                   </div>
                </div>
-               <div class="flex flex-col space-y-3 collapse-body">
+               <div
+                  class="flex flex-col px-2 py-0.5 space-y-3 overflow-hidden max-h-0 collapse-body"
+               >
                   <label
                      class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
                   >
@@ -119,16 +129,16 @@
                   <p class="font-bold">Date</p>
                   <div class="btn-collapse">
                      <i
-                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn"
+                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
                      ></i>
                      <i
-                        class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn hidden"
+                        class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn"
                      ></i>
                   </div>
                </div>
 
-               <div class="collapse-body">
-                  <div date-rangepicker class="flex items-center">
+               <div class="px-4 overflow-hidden max-h-0 collapse-body">
+                  <div date-rangepicker class="flex items-center py-2">
                      <div class="relative">
                         <div
                            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
@@ -149,11 +159,11 @@
                         <input
                            name="start"
                            type="text"
-                           class="bg-blue-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                           class="bg-blue-50 border-none text-gray-900 sm:text-sm rounded-l-lg block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition duration-300"
                            placeholder="start"
                         />
                      </div>
-                     <span class="mx-4 text-gray-500">to</span>
+                     <span class="bg-blue-50 p-2 text-gray-500">To</span>
                      <div class="relative">
                         <div
                            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
@@ -174,7 +184,7 @@
                         <input
                            name="end"
                            type="text"
-                           class="bg-blue-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                           class="bg-blue-50 border-none text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition duration-300"
                            placeholder="end"
                         />
                      </div>
@@ -189,14 +199,16 @@
                   <p class="font-bold">Size</p>
                   <div class="btn-collapse">
                      <i
-                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn"
+                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
                      ></i>
                      <i
-                        class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn hidden"
+                        class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn"
                      ></i>
                   </div>
                </div>
-               <div class="flex flex-col gap-2 collapse-body">
+               <div
+                  class="flex flex-col gap-2 px-2 py-0.5 overflow-hidden max-h-0 collapse-body"
+               >
                   <label
                      class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
                   >
@@ -306,15 +318,15 @@
                   <p class="font-bold">Direction</p>
                   <div class="btn-collapse">
                      <i
-                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn"
+                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
                      ></i>
                      <i
-                        class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn hidden"
+                        class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn"
                      ></i>
                   </div>
                </div>
-               <div class="collapse-body">
-                  <ul class="flex space-x-4">
+               <div class="collapse-body overflow-hidden max-h-0">
+                  <ul class="flex space-x-4 py-2 px-2">
                      <li>
                         <input
                            class="sr-only peer"
@@ -324,7 +336,7 @@
                            id="direction_long"
                         />
                         <label
-                           class="flex items-center py-1.5 px-3.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-green-700 peer-checked:ring-2 peer-checked:bg-green-300 peer-checked:text-green-900 cursor-pointer transition duration-300"
+                           class="flex items-center px-3.5 py-1.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-green-700 peer-checked:ring-2 peer-checked:bg-green-300 peer-checked:text-green-900 cursor-pointer transition duration-300"
                            for="direction_long"
                         >
                            <i class="fa-solid fa-arrow-trend-up"></i>
@@ -341,7 +353,7 @@
                            id="direction_short"
                         />
                         <label
-                           class="flex items-center py-1.5 px-3.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-green-700 peer-checked:ring-2 peer-checked:bg-green-300 peer-checked:text-green-900 cursor-pointer transition duration-300"
+                           class="flex items-center px-3.5 py-1.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-orange-400 peer-checked:ring-2 peer-checked:bg-orange-300 peer-checked:text-orange-900 cursor-pointer transition duration-300"
                            for="direction_short"
                         >
                            <i class="fa-solid fa-arrow-trend-down"></i>
@@ -353,33 +365,40 @@
             </div>
 
             <!-- Efficency -->
-            <div class="flex flex-col space-y-4">
+            <div class="flex flex-col py-4">
                <div class="flex items-center justify-between">
                   <p class="font-bold">Efficency</p>
                   <div class="btn-collapse">
                      <i
-                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn"
+                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
                      ></i>
                      <i
-                        class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn hidden"
+                        class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn"
                      ></i>
                   </div>
                </div>
-               <div class="collapse-body">
+               <div class="collapse-body max-h-0 overflow-hidden">
+                  <p>
+                     <span class="text-gray rang-slider-progress text-sm"
+                        >0</span
+                     >%
+                  </p>
                   <input
-                     id="default-range"
+                     id="range-slider"
                      type="range"
                      min="0"
                      max="100"
-                     value="10"
-                     class="w-full h-2 rounded-lg bg-red-400 appearance-none bg-gradient-to-r from-green-400 cursor-pointer"
+                     value="0"
+                     class="w-full h-2 rounded-lg cursor-pointer appearance-none border-2"
                   />
-                  <ul class="flex justify-between w-full font-semibold">
-                     <li>0%</li>
-                     <li>25%</li>
-                     <li>50%</li>
-                     <li>75%</li>
-                     <li>100%</li>
+                  <ul
+                     class="flex justify-between font-semibold text-sm relative w-full h-4"
+                  >
+                     <li class="absolute left-0">0%</li>
+                     <li class="flex items-center absolute left-[22%]">25%</li>
+                     <li class="absolute left-[45%]">50%</li>
+                     <li class="absolute left-[70%]">75%</li>
+                     <li class="absolute right-0">100%</li>
                   </ul>
                </div>
             </div>
@@ -388,10 +407,17 @@
             <div class="flex flex-col gap-4">
                <div class="flex items-center justify-between">
                   <p class="font-bold">Risk</p>
-                  <i
-                     class="fa-solid fa-minus text-red-400 cursor-pointer hidden"
-                  ></i>
-                  <i class="fa-solid fa-plus text-blue-700 cursor-pointer"></i>
+                  <div class="btn-collapse">
+                     <i
+                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
+                     ></i>
+                     <i
+                        class="fa-solid fa-plus text-blue-700 open-btn cursor-pointer"
+                     ></i>
+                  </div>
+               </div>
+               <div class="collapse-body overflow-hidden max-h-0">
+                  <p>test</p>
                </div>
             </div>
             <!--  -->
@@ -401,15 +427,17 @@
                   <p class="font-bold">Risk/Reward</p>
                   <div class="btn-collapse">
                      <i
-                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn"
+                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
                      ></i>
                      <i
-                        class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn hidden"
+                        class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn"
                      ></i>
                   </div>
                </div>
 
-               <ul class="flex flex-col space-y-2 collapse-body">
+               <ul
+                  class="flex flex-col space-y-2 px-2 py-0.5 collapse-body overflow-hidden max-h-0"
+               >
                   <li>
                      <label
                         class="font-semibold flex items-center gap-2 text-sm"
@@ -417,7 +445,7 @@
                         <input
                            type="radio"
                            name="risk/reward"
-                           class="rounded-sm border-none bg-blue-200"
+                           class="rounded-sm border-none outline-none bg-blue-200 appearance-none"
                         />
                         LESS THAN 1/1
                      </label>
@@ -503,14 +531,16 @@
                   <p class="font-bold">Setup</p>
                   <div class="btn-collapse">
                      <i
-                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn"
+                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
                      ></i>
                      <i
-                        class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn hidden"
+                        class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn"
                      ></i>
                   </div>
                </div>
-               <div class="flex flex-col gap-2 collapse-body">
+               <div
+                  class="flex flex-col gap-2 collapse-body max-h-0 overflow-hidden px-2 py-0.5"
+               >
                   <label class="font-semibold flex items-center gap-2 text-sm">
                      <input
                         type="radio"
@@ -552,15 +582,17 @@
                   <p class="font-bold">Win/Loss</p>
                   <div class="btn-collapse">
                      <i
-                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn"
+                        class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
                      ></i>
                      <i
-                        class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn hidden"
+                        class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn"
                      ></i>
                   </div>
                </div>
-               <div class="flex flex-col gap-2 collapse-body">
-                  <ul class="flex space-x-4">
+               <div
+                  class="flex flex-col gap-2 collapse-body overflow-hidden max-h-0"
+               >
+                  <ul class="flex space-x-4 p-2">
                      <li>
                         <input
                            class="sr-only peer"
@@ -593,7 +625,6 @@
                         >
                      </li>
                   </ul>
-                  l
                </div>
             </div>
             <!--  -->
@@ -603,7 +634,7 @@
                   >Cancel</a
                >
                <a
-                  class="py-2 px-6 rounded-md bg-blue-500 text-white hover:opacity-80 active:opacity-100 transition duration-300"
+                  class="py-2 px-6 rounded-md bg-blue-500 text-white hover:opacity-80 active:opacity-100 transition duration-300 cursor-pointer"
                >
                   Apply Filter
                </a>
