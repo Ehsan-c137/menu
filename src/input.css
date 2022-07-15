@@ -11,8 +11,8 @@
 
 #range-slider::-webkit-slider-thumb {
    -webkit-appearance: none;
-   width: 11px;
-   height: 11px;
+   width: 14px;
+   height: 14px;
    border-radius: 50%;
    background-color: white;
    box-shadow: 0px 0px 1px black;
