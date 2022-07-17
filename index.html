@@ -33,11 +33,11 @@
       <main>
          <!-- filter container -->
          <div class="flex flex-col">
-            <div class="flex items-center space-x-2 px-4 py-1">
+            <div class="flex items-center space-x-2 px-4 py-3">
                <span class="w-2 h-2 rounded-full bg-blue-600"></span>
                <p class="font-bold text-lg">Filter by:</p>
             </div>
-            <div class="flex flex-col px-6 py-3 gap-y-8 max-w-sm">
+            <div class="flex flex-col px-8 py-3 gap-y-8 max-w-sm">
                <!-- pair -->
                <div class="flex flex-col">
                   <div class="flex flex-col">
@@ -62,7 +62,7 @@
                               type="checkbox"
                               name="check"
                               value="BTCUSDT"
-                              class="rounded-md bg-blue-100 border-none"
+                              class="bg-blue-100 border-none w-4 h-4 rounded-md"
                            />
                            BTCUSDT
                         </label>
@@ -199,7 +199,7 @@
                         </div>
                      </div>
                      <div
-                        class="flex flex-col gap-2 px-2 py-0.5 my-2 overflow-hidden max-h-0 collapse-body"
+                        class="flex flex-col gap-y-3 px-2 py-0.5 my-2 overflow-hidden max-h-0 collapse-body"
                      >
                         <label
                            class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
@@ -429,7 +429,7 @@
                      </div>
 
                      <ul
-                        class="flex flex-col my-2 px-2 py-0.5 collapse-body overflow-hidden max-h-0"
+                        class="flex flex-col my-2 px-2 py-0.5 gap-y-3 collapse-body overflow-hidden max-h-0"
                      >
                         <li>
                            <label
@@ -593,7 +593,7 @@
                      <div
                         class="flex flex-col gap-2 collapse-body overflow-hidden max-h-0"
                      >
-                        <ul class="flex space-x-4 p-2">
+                        <ul class="flex space-x-4 p-1">
                            <li>
                               <input
                                  class="sr-only peer"
@@ -603,7 +603,7 @@
                                  id="winloss_win"
                               />
                               <label
-                                 class="flex items-center py-1.5 px-3.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-green-700 peer-checked:ring-2 peer-checked:bg-green-300 peer-checked:text-green-900 cursor-pointer transition duration-300"
+                                 class="flex items-center py-1 px-2.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-green-700 peer-checked:ring-2 peer-checked:bg-green-300 peer-checked:text-green-900 cursor-pointer transition duration-300"
                                  for="winloss_win"
                               >
                                  Win
@@ -619,7 +619,7 @@
                                  id="winloss_loss"
                               />
                               <label
-                                 class="flex items-center py-1.5 px-3.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-red-700 peer-checked:ring-2 peer-checked:bg-red-300 peer-checked:text-red-900 cursor-pointer transition duration-300"
+                                 class="flex items-center py-1 px-2.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-red-700 peer-checked:ring-2 peer-checked:bg-red-300 peer-checked:text-red-900 cursor-pointer transition duration-300"
                                  for="winloss_loss"
                               >
                                  Loss</label
