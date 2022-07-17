@@ -37,9 +37,8 @@ btnCollapse.forEach((i) => {
 
 // range slider
 const rangeSlider = document.querySelector("#range-slider");
-const rangeSliderProgress = document.querySelector(".rang-slider-progress");
+
 rangeSlider.addEventListener("input", function () {
    const value = this.value;
-   this.style.background = `linear-gradient(to right, #1ca27f 0%, #1ca27f ${value}%, #fff ${value}%, white 100%)`;
-   rangeSliderProgress.textContent = value;
+   this.style.background = `linear-gradient(to right, #21977b 0%, #1ca27f ${value}%, #fff ${value}%, white 100%)`;
 });

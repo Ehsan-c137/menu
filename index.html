@@ -32,612 +32,614 @@
    <body>
       <main>
          <!-- filter container -->
-         <div class="flex flex-col p-6 gap-y-8 max-w-sm">
-            <div class="flex items-center space-x-2 relative">
+         <div class="flex flex-col">
+            <div class="flex items-center space-x-2 px-4 py-1">
                <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-               <p class="font-bold">Filter by:</p>
+               <p class="font-bold text-lg">Filter by:</p>
             </div>
-            <!-- pair -->
-            <div class="flex flex-col">
+            <div class="flex flex-col px-6 py-3 gap-y-8 max-w-sm">
+               <!-- pair -->
                <div class="flex flex-col">
-                  <div class="flex items-center justify-between">
-                     <p class="font-bold">Pair</p>
-                     <div class="btn-collapse">
-                        <i
-                           class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
-                        ></i>
-                        <i
-                           class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn"
-                        ></i>
-                     </div>
-                  </div>
-                  <div
-                     class="flex flex-col px-2 py-0.5 my-2 space-y-3 overflow-hidden max-h-0 collapse-body"
-                  >
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="check"
-                           value="BTCUSDT"
-                           class="rounded-md bg-blue-100 border-none"
-                        />
-                        BTCUSDT
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="check"
-                           value="ETHUSDT"
-                           class="rounded-md bg-blue-100 border-none"
-                        />
-                        ETHUSDT
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="coin"
-                           value="XRPUSDT"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        XRPUSDT
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="coin"
-                           value="BNBUSDT"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        BNBUSDT
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="coin"
-                           value="LINKUSDT"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        LINKUSDT
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="coin"
-                           value="ADAUSDT"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        ADAUSDT
-                     </label>
-                  </div>
-                  <!-- end of pair -->
-               </div>
-
-               <!-- date container -->
-               <div id="filter-range-picker" class="flex flex-col">
-                  <div class="flex items-center justify-between">
-                     <p class="font-bold">Date</p>
-                     <div class="btn-collapse">
-                        <i
-                           class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
-                        ></i>
-                        <i
-                           class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn"
-                        ></i>
-                     </div>
-                  </div>
-
-                  <div
-                     class="px-2 py-0.5 my-2 overflow-hidden max-h-0 collapse-body"
-                  >
-                     <div date-rangepicker class="flex items-center py-2">
-                        <!-- <div> -->
-                        <input
-                           name="start"
-                           type="text"
-                           class="h-9 bg-blue-50 border-none text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-l-lg transition duration-300"
-                           placeholder="MM/DD/YY"
-                        />
-                        <!-- </div> -->
-                        <span
-                           class="flex items-center bg-blue-50 h-9 px-4 text-sm text-gray-500 -z-10"
-                           >To</span
-                        >
-                        <!-- <div> -->
-
-                        <input
-                           name="end"
-                           type="text"
-                           class="h-9 bg-blue-50 border-none text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition duration-300"
-                           placeholder="MM/DD/YY"
-                        />
-                        <!-- </div> -->
-                        <div
-                           class="h-9 inset-y-0 flex items-center px-2 pointer-events-none bg-blue-50 rounded-r-lg -z-10"
-                        >
-                           <svg
-                              class="w-5 h-5 text-blue-500 dark:text-gray-400"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
-                           >
-                              <path
-                                 fill-rule="evenodd"
-                                 d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                 clip-rule="evenodd"
-                              ></path>
-                           </svg>
+                  <div class="flex flex-col">
+                     <div class="flex items-center justify-between">
+                        <p class="font-bold">Pair</p>
+                        <div class="btn-collapse">
+                           <i
+                              class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
+                           ></i>
+                           <i
+                              class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn"
+                           ></i>
                         </div>
                      </div>
-                     <!--  -->
-                  </div>
-               </div>
-
-               <!-- size -->
-               <div class="flex flex-col">
-                  <div class="flex items-center justify-between">
-                     <p class="font-bold">Size</p>
-                     <div class="btn-collapse">
-                        <i
-                           class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
-                        ></i>
-                        <i
-                           class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn"
-                        ></i>
-                     </div>
-                  </div>
-                  <div
-                     class="flex flex-col gap-2 px-2 py-0.5 my-2 overflow-hidden max-h-0 collapse-body"
-                  >
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                     <div
+                        class="flex flex-col px-2 py-0.5 my-2 space-y-3 overflow-hidden max-h-0 collapse-body"
                      >
-                        <input
-                           type="checkbox"
-                           value="0-1.99"
-                           name="size"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        0 - 1.99
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="size"
-                           value="2-4.99"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        2 - 4.99
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="size"
-                           value="5-9.99"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        5 - 9.99
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="size"
-                           value="10-19.99"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        10 - 19.99
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="size"
-                           value="20-40.99"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        20 - 49.99
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="size"
-                           value="50-199.99"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        50 - 199.99
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="size"
-                           value="200-999.99"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        200 - 999.99
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           value="1000-9999.99"
-                           name="size"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        1000 - 9999.99
-                     </label>
-                     <label
-                        class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
-                     >
-                        <input
-                           type="checkbox"
-                           name="size"
-                           value="1000-over"
-                           class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
-                        />
-                        1000 AND OVER
-                     </label>
-                  </div>
-                  <!-- end of size -->
-               </div>
-
-               <!-- direction -->
-               <div class="flex flex-col">
-                  <div class="flex items-center justify-between">
-                     <p class="font-bold">Direction</p>
-                     <div class="btn-collapse">
-                        <i
-                           class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
-                        ></i>
-                        <i
-                           class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn"
-                        ></i>
-                     </div>
-                  </div>
-                  <div
-                     class="collapse-body overflow-hidden max-h-0 py-0.5 my-2"
-                  >
-                     <ul class="flex gap-2 px-2 py-2">
-                        <li>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
                            <input
-                              class="sr-only peer"
-                              type="radio"
-                              value="long"
-                              name="direction"
-                              id="direction_long"
+                              type="checkbox"
+                              name="check"
+                              value="BTCUSDT"
+                              class="rounded-md bg-blue-100 border-none"
                            />
-                           <label
-                              class="flex items-center px-3.5 py-1.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-green-700 peer-checked:ring-2 peer-checked:bg-green-300 peer-checked:text-green-900 cursor-pointer transition duration-300 text-sm"
-                              for="direction_long"
-                           >
-                              <i class="fa-solid fa-arrow-trend-up"></i>
-                              long
-                           </label>
-                        </li>
-
-                        <li>
+                           BTCUSDT
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
                            <input
-                              class="sr-only peer"
-                              type="radio"
-                              value="short"
-                              name="direction"
-                              id="direction_short"
+                              type="checkbox"
+                              name="check"
+                              value="ETHUSDT"
+                              class="rounded-md bg-blue-100 border-none"
                            />
-                           <label
-                              class="flex items-center px-3.5 py-1.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-red-700 peer-checked:ring-2 peer-checked:bg-red-300 peer-checked:text-red-900 cursor-pointer transition duration-300 text-sm"
-                              for="direction_short"
-                           >
-                              <i class="fa-solid fa-arrow-trend-down"></i>
-                              Short</label
-                           >
-                        </li>
-                     </ul>
+                           ETHUSDT
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              name="coin"
+                              value="XRPUSDT"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           XRPUSDT
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              name="coin"
+                              value="BNBUSDT"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           BNBUSDT
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              name="coin"
+                              value="LINKUSDT"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           LINKUSDT
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              name="coin"
+                              value="ADAUSDT"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           ADAUSDT
+                        </label>
+                     </div>
+                     <!-- end of pair -->
                   </div>
-               </div>
 
-               <!-- Efficency -->
-               <div class="flex flex-col">
-                  <div class="flex items-center justify-between">
-                     <p class="font-bold">Efficency</p>
-                     <div class="btn-collapse">
-                        <i
-                           class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
-                        ></i>
-                        <i
-                           class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn"
-                        ></i>
+                  <!-- date container -->
+                  <div id="filter-range-picker" class="flex flex-col">
+                     <div class="flex items-center justify-between">
+                        <p class="font-bold">Date</p>
+                        <div class="btn-collapse">
+                           <i
+                              class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
+                           ></i>
+                           <i
+                              class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn"
+                           ></i>
+                        </div>
+                     </div>
+
+                     <div
+                        class="px-2 py-0.5 my-2 overflow-hidden max-h-0 collapse-body"
+                     >
+                        <div date-rangepicker class="flex items-center py-2">
+                           <!-- <div> -->
+                           <input
+                              name="start"
+                              type="text"
+                              class="h-9 bg-blue-50 border-none text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-l-lg transition duration-300"
+                              placeholder="MM/DD/YY"
+                           />
+                           <!-- </div> -->
+                           <span
+                              class="flex items-center bg-blue-50 h-9 px-4 text-sm text-gray-500 -z-10"
+                              >To</span
+                           >
+                           <!-- <div> -->
+
+                           <input
+                              name="end"
+                              type="text"
+                              class="h-9 bg-blue-50 border-none text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition duration-300"
+                              placeholder="MM/DD/YY"
+                           />
+                           <!-- </div> -->
+                           <div
+                              class="h-9 inset-y-0 flex items-center px-2 pointer-events-none bg-blue-50 rounded-r-lg -z-10"
+                           >
+                              <svg
+                                 class="w-5 h-5 text-blue-500 dark:text-gray-400"
+                                 fill="currentColor"
+                                 viewBox="0 0 20 20"
+                                 xmlns="http://www.w3.org/2000/svg"
+                              >
+                                 <path
+                                    fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"
+                                 ></path>
+                              </svg>
+                           </div>
+                        </div>
+                        <!--  -->
                      </div>
                   </div>
-                  <div
-                     class="collapse-body max-h-0 overflow-hidden px-2 py-0.5 my-2"
-                  >
-                     <input
-                        id="range-slider"
-                        type="range"
-                        min="0"
-                        max="100"
-                        value="0"
-                        class="w-full h-2 rounded-lg cursor-pointer appearance-none border-2"
-                     />
+
+                  <!-- size -->
+                  <div class="flex flex-col">
+                     <div class="flex items-center justify-between">
+                        <p class="font-bold">Size</p>
+                        <div class="btn-collapse">
+                           <i
+                              class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
+                           ></i>
+                           <i
+                              class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn"
+                           ></i>
+                        </div>
+                     </div>
+                     <div
+                        class="flex flex-col gap-2 px-2 py-0.5 my-2 overflow-hidden max-h-0 collapse-body"
+                     >
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              value="0-1.99"
+                              name="size"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           0 - 1.99
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              name="size"
+                              value="2-4.99"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           2 - 4.99
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              name="size"
+                              value="5-9.99"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           5 - 9.99
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              name="size"
+                              value="10-19.99"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           10 - 19.99
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              name="size"
+                              value="20-40.99"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           20 - 49.99
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              name="size"
+                              value="50-199.99"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           50 - 199.99
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              name="size"
+                              value="200-999.99"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           200 - 999.99
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              value="1000-9999.99"
+                              name="size"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           1000 - 9999.99
+                        </label>
+                        <label
+                           class="flex items-center gap-2 font-semibold text-sm cursor-pointer"
+                        >
+                           <input
+                              type="checkbox"
+                              name="size"
+                              value="1000-over"
+                              class="checked:bg-blue-400 rounded-md bg-blue-100 border-none"
+                           />
+                           1000 AND OVER
+                        </label>
+                     </div>
+                     <!-- end of size -->
+                  </div>
+
+                  <!-- direction -->
+                  <div class="flex flex-col">
+                     <div class="flex items-center justify-between">
+                        <p class="font-bold">Direction</p>
+                        <div class="btn-collapse">
+                           <i
+                              class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
+                           ></i>
+                           <i
+                              class="fa-solid fa-plus cursor-pointer text-blue-700 open-btn"
+                           ></i>
+                        </div>
+                     </div>
+                     <div
+                        class="collapse-body overflow-hidden max-h-0 py-0.5 my-2"
+                     >
+                        <ul class="flex gap-2 px-2 py-2">
+                           <li>
+                              <input
+                                 class="sr-only peer"
+                                 type="radio"
+                                 value="long"
+                                 name="direction"
+                                 id="direction_long"
+                              />
+                              <label
+                                 class="flex items-center px-3.5 py-1.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-green-700 peer-checked:ring-2 peer-checked:bg-green-300 peer-checked:text-green-900 cursor-pointer transition duration-300 text-sm"
+                                 for="direction_long"
+                              >
+                                 <i class="fa-solid fa-arrow-trend-up"></i>
+                                 long
+                              </label>
+                           </li>
+
+                           <li>
+                              <input
+                                 class="sr-only peer"
+                                 type="radio"
+                                 value="short"
+                                 name="direction"
+                                 id="direction_short"
+                              />
+                              <label
+                                 class="flex items-center px-3.5 py-1.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-red-700 peer-checked:ring-2 peer-checked:bg-red-300 peer-checked:text-red-900 cursor-pointer transition duration-300 text-sm"
+                                 for="direction_short"
+                              >
+                                 <i class="fa-solid fa-arrow-trend-down"></i>
+                                 Short</label
+                              >
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <!-- Efficency -->
+                  <div class="flex flex-col">
+                     <div class="flex items-center justify-between">
+                        <p class="font-bold">Efficency</p>
+                        <div class="btn-collapse">
+                           <i
+                              class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
+                           ></i>
+                           <i
+                              class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn"
+                           ></i>
+                        </div>
+                     </div>
+                     <div
+                        class="collapse-body max-h-0 overflow-hidden px-2 py-0.5 my-2"
+                     >
+                        <input
+                           id="range-slider"
+                           type="range"
+                           min="0"
+                           max="100"
+                           value="0"
+                           class="w-full h-2 rounded-lg cursor-pointer appearance-none border-2"
+                        />
+                        <ul
+                           class="flex justify-between font-semibold text-sm relative w-full h-4"
+                        >
+                           <li class="absolute left-0">0%</li>
+                           <li class="flex items-center absolute left-[22%]">
+                              25%
+                           </li>
+                           <li class="absolute left-[45%]">50%</li>
+                           <li class="absolute left-[70%]">75%</li>
+                           <li class="absolute right-0">100%</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <!-- risk -->
+                  <div class="flex flex-col">
+                     <div class="flex items-center justify-between">
+                        <p class="font-bold">Risk</p>
+                        <div class="btn-collapse">
+                           <i
+                              class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
+                           ></i>
+                           <i
+                              class="fa-solid fa-plus text-blue-700 open-btn cursor-pointer"
+                           ></i>
+                        </div>
+                     </div>
+                     <div class="collapse-body overflow-hidden max-h-0 my-2">
+                        <p>test</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <!-- risk / reward -->
+                  <div class="flex flex-col">
+                     <div class="flex items-center justify-between">
+                        <p class="font-bold">Risk/Reward</p>
+                        <div class="btn-collapse">
+                           <i
+                              class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
+                           ></i>
+                           <i
+                              class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn"
+                           ></i>
+                        </div>
+                     </div>
+
                      <ul
-                        class="flex justify-between font-semibold text-sm relative w-full h-4"
+                        class="flex flex-col my-2 px-2 py-0.5 collapse-body overflow-hidden max-h-0"
                      >
-                        <li class="absolute left-0">0%</li>
-                        <li class="flex items-center absolute left-[22%]">
-                           25%
-                        </li>
-                        <li class="absolute left-[45%]">50%</li>
-                        <li class="absolute left-[70%]">75%</li>
-                        <li class="absolute right-0">100%</li>
-                     </ul>
-                  </div>
-               </div>
-               <!--  -->
-               <!-- risk -->
-               <div class="flex flex-col">
-                  <div class="flex items-center justify-between">
-                     <p class="font-bold">Risk</p>
-                     <div class="btn-collapse">
-                        <i
-                           class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
-                        ></i>
-                        <i
-                           class="fa-solid fa-plus text-blue-700 open-btn cursor-pointer"
-                        ></i>
-                     </div>
-                  </div>
-                  <div class="collapse-body overflow-hidden max-h-0 my-2">
-                     <p>test</p>
-                  </div>
-               </div>
-               <!--  -->
-               <!-- risk / reward -->
-               <div class="flex flex-col">
-                  <div class="flex items-center justify-between">
-                     <p class="font-bold">Risk/Reward</p>
-                     <div class="btn-collapse">
-                        <i
-                           class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
-                        ></i>
-                        <i
-                           class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn"
-                        ></i>
-                     </div>
-                  </div>
-
-                  <ul
-                     class="flex flex-col my-2 px-2 py-0.5 collapse-body overflow-hidden max-h-0"
-                  >
-                     <li>
-                        <label
-                           class="font-semibold flex items-center gap-2 text-sm"
-                        >
-                           <input
-                              type="radio"
-                              name="risk/reward"
-                              class="rounded-sm border-none outline-none bg-blue-200 appearance-none"
-                           />
-                           LESS THAN 1/1
-                        </label>
-                     </li>
-                     <li>
-                        <label
-                           class="font-semibold flex items-center gap-2 text-sm"
-                        >
-                           <input
-                              type="radio"
-                              name="risk/reward"
-                              class="rounded-sm border-none bg-blue-200"
-                           />
-                           1/1
-                        </label>
-                     </li>
-                     <li>
-                        <label
-                           class="font-semibold flex items-center gap-2 text-sm"
-                        >
-                           <input
-                              type="radio"
-                              name="risk/reward"
-                              class="rounded-sm border-none bg-blue-200"
-                           />
-                           1/2
-                        </label>
-                     </li>
-                     <li>
-                        <label
-                           class="font-semibold flex items-center gap-2 text-sm"
-                        >
-                           <input
-                              type="radio"
-                              name="risk/reward"
-                              class="rounded-sm border-none bg-blue-200"
-                           />
-                           1/3
-                        </label>
-                     </li>
-                     <li>
-                        <label
-                           class="font-semibold flex items-center gap-2 text-sm"
-                        >
-                           <input
-                              type="radio"
-                              name="risk/reward"
-                              class="rounded-sm border-none bg-blue-200"
-                           />
-                           1/4
-                        </label>
-                     </li>
-                     <li>
-                        <label
-                           class="font-semibold flex items-center gap-2 text-sm"
-                        >
-                           <input
-                              type="radio"
-                              name="risk/reward"
-                              class="rounded-sm border-none bg-blue-200"
-                           />
-                           1/5
-                        </label>
-                     </li>
-                     <li>
-                        <label
-                           class="font-semibold flex items-center gap-2 text-sm"
-                        >
-                           <input
-                              type="radio"
-                              name="risk/reward"
-                              class="rounded-sm border-none bg-blue-200"
-                           />
-                           MORE THAN 1/5
-                        </label>
-                     </li>
-                  </ul>
-               </div>
-               <!--  -->
-               <!-- setup -->
-               <div class="flex flex-col">
-                  <div class="flex items-center justify-between">
-                     <p class="font-bold">Setup</p>
-                     <div class="btn-collapse">
-                        <i
-                           class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
-                        ></i>
-                        <i
-                           class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn"
-                        ></i>
-                     </div>
-                  </div>
-                  <div
-                     class="flex flex-col gap-2 collapse-body max-h-0 overflow-hidden px-2 py-0.5 my-2"
-                  >
-                     <label
-                        class="font-semibold flex items-center gap-2 text-sm"
-                     >
-                        <input
-                           type="radio"
-                           name="setup"
-                           class="rounded-sm border-none bg-blue-200"
-                        />
-                        QML
-                     </label>
-                     <label
-                        class="font-semibold flex items-center gap-2 text-sm"
-                     >
-                        <input
-                           type="radio"
-                           name="setup"
-                           class="rounded-sm border-none bg-blue-200"
-                        />
-                        SMC
-                     </label>
-                     <label
-                        class="font-semibold flex items-center gap-2 text-sm"
-                     >
-                        <input
-                           type="radio"
-                           name="setup"
-                           class="rounded-sm border-none bg-blue-200"
-                        />
-                        Divergence
-                     </label>
-                     <label
-                        class="font-semibold flex items-center gap-2 text-sm"
-                     >
-                        <input
-                           type="radio"
-                           name="setup"
-                           class="rounded-sm border-none bg-blue-200"
-                        />
-                        Trendline
-                     </label>
-                  </div>
-               </div>
-               <!--  -->
-               <!-- win / loss -->
-               <div class="flex flex-col space-y-4">
-                  <div class="flex items-center justify-between">
-                     <p class="font-bold">Win/Loss</p>
-                     <div class="btn-collapse">
-                        <i
-                           class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
-                        ></i>
-                        <i
-                           class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn"
-                        ></i>
-                     </div>
-                  </div>
-                  <div
-                     class="flex flex-col gap-2 collapse-body overflow-hidden max-h-0"
-                  >
-                     <ul class="flex space-x-4 p-2">
                         <li>
-                           <input
-                              class="sr-only peer"
-                              type="radio"
-                              value="win"
-                              name="winloss"
-                              id="winloss_win"
-                           />
                            <label
-                              class="flex items-center py-1.5 px-3.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-green-700 peer-checked:ring-2 peer-checked:bg-green-300 peer-checked:text-green-900 cursor-pointer transition duration-300"
-                              for="winloss_win"
+                              class="font-semibold flex items-center gap-2 text-sm"
                            >
-                              Win
+                              <input
+                                 type="radio"
+                                 name="risk/reward"
+                                 class="rounded-sm border-none outline-none bg-blue-200 appearance-none"
+                              />
+                              LESS THAN 1/1
                            </label>
                         </li>
-
                         <li>
-                           <input
-                              class="sr-only peer"
-                              type="radio"
-                              value="loss"
-                              name="winloss"
-                              id="winloss_loss"
-                           />
                            <label
-                              class="flex items-center py-1.5 px-3.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-red-700 peer-checked:ring-2 peer-checked:bg-red-300 peer-checked:text-red-900 cursor-pointer transition duration-300"
-                              for="winloss_loss"
+                              class="font-semibold flex items-center gap-2 text-sm"
                            >
-                              Loss</label
+                              <input
+                                 type="radio"
+                                 name="risk/reward"
+                                 class="rounded-sm border-none bg-blue-200"
+                              />
+                              1/1
+                           </label>
+                        </li>
+                        <li>
+                           <label
+                              class="font-semibold flex items-center gap-2 text-sm"
                            >
+                              <input
+                                 type="radio"
+                                 name="risk/reward"
+                                 class="rounded-sm border-none bg-blue-200"
+                              />
+                              1/2
+                           </label>
+                        </li>
+                        <li>
+                           <label
+                              class="font-semibold flex items-center gap-2 text-sm"
+                           >
+                              <input
+                                 type="radio"
+                                 name="risk/reward"
+                                 class="rounded-sm border-none bg-blue-200"
+                              />
+                              1/3
+                           </label>
+                        </li>
+                        <li>
+                           <label
+                              class="font-semibold flex items-center gap-2 text-sm"
+                           >
+                              <input
+                                 type="radio"
+                                 name="risk/reward"
+                                 class="rounded-sm border-none bg-blue-200"
+                              />
+                              1/4
+                           </label>
+                        </li>
+                        <li>
+                           <label
+                              class="font-semibold flex items-center gap-2 text-sm"
+                           >
+                              <input
+                                 type="radio"
+                                 name="risk/reward"
+                                 class="rounded-sm border-none bg-blue-200"
+                              />
+                              1/5
+                           </label>
+                        </li>
+                        <li>
+                           <label
+                              class="font-semibold flex items-center gap-2 text-sm"
+                           >
+                              <input
+                                 type="radio"
+                                 name="risk/reward"
+                                 class="rounded-sm border-none bg-blue-200"
+                              />
+                              MORE THAN 1/5
+                           </label>
                         </li>
                      </ul>
                   </div>
-               </div>
-               <!--  -->
-               <div class="flex space-x-2 items-center justify-center">
-                  <a
-                     class="py-2 px-6 cursor-pointer hover:text-red-400 transition duration-300"
-                     >Cancel</a
-                  >
-                  <a
-                     class="py-2 px-6 rounded-md bg-blue-500 text-white hover:opacity-80 active:opacity-100 transition duration-300 cursor-pointer"
-                  >
-                     Apply Filter
-                  </a>
+                  <!--  -->
+                  <!-- setup -->
+                  <div class="flex flex-col">
+                     <div class="flex items-center justify-between">
+                        <p class="font-bold">Setup</p>
+                        <div class="btn-collapse">
+                           <i
+                              class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
+                           ></i>
+                           <i
+                              class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn"
+                           ></i>
+                        </div>
+                     </div>
+                     <div
+                        class="flex flex-col gap-2 collapse-body max-h-0 overflow-hidden px-2 py-0.5 my-2"
+                     >
+                        <label
+                           class="font-semibold flex items-center gap-2 text-sm"
+                        >
+                           <input
+                              type="radio"
+                              name="setup"
+                              class="rounded-sm border-none bg-blue-200"
+                           />
+                           QML
+                        </label>
+                        <label
+                           class="font-semibold flex items-center gap-2 text-sm"
+                        >
+                           <input
+                              type="radio"
+                              name="setup"
+                              class="rounded-sm border-none bg-blue-200"
+                           />
+                           SMC
+                        </label>
+                        <label
+                           class="font-semibold flex items-center gap-2 text-sm"
+                        >
+                           <input
+                              type="radio"
+                              name="setup"
+                              class="rounded-sm border-none bg-blue-200"
+                           />
+                           Divergence
+                        </label>
+                        <label
+                           class="font-semibold flex items-center gap-2 text-sm"
+                        >
+                           <input
+                              type="radio"
+                              name="setup"
+                              class="rounded-sm border-none bg-blue-200"
+                           />
+                           Trendline
+                        </label>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <!-- win / loss -->
+                  <div class="flex flex-col space-y-4">
+                     <div class="flex items-center justify-between">
+                        <p class="font-bold">Win/Loss</p>
+                        <div class="btn-collapse">
+                           <i
+                              class="fa-solid fa-minus text-red-400 cursor-pointer close-btn hidden"
+                           ></i>
+                           <i
+                              class="fa-solid fa-plus text-blue-700 cursor-pointer open-btn"
+                           ></i>
+                        </div>
+                     </div>
+                     <div
+                        class="flex flex-col gap-2 collapse-body overflow-hidden max-h-0"
+                     >
+                        <ul class="flex space-x-4 p-2">
+                           <li>
+                              <input
+                                 class="sr-only peer"
+                                 type="radio"
+                                 value="win"
+                                 name="winloss"
+                                 id="winloss_win"
+                              />
+                              <label
+                                 class="flex items-center py-1.5 px-3.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-green-700 peer-checked:ring-2 peer-checked:bg-green-300 peer-checked:text-green-900 cursor-pointer transition duration-300"
+                                 for="winloss_win"
+                              >
+                                 Win
+                              </label>
+                           </li>
+
+                           <li>
+                              <input
+                                 class="sr-only peer"
+                                 type="radio"
+                                 value="loss"
+                                 name="winloss"
+                                 id="winloss_loss"
+                              />
+                              <label
+                                 class="flex items-center py-1.5 px-3.5 gap-2 bg-gray-300 rounded-md peer-checked:ring-red-700 peer-checked:ring-2 peer-checked:bg-red-300 peer-checked:text-red-900 cursor-pointer transition duration-300"
+                                 for="winloss_loss"
+                              >
+                                 Loss</label
+                              >
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="flex space-x-2 items-center justify-center">
+                     <a
+                        class="py-2 px-6 cursor-pointer hover:text-red-400 transition duration-300"
+                        >Cancel</a
+                     >
+                     <a
+                        class="py-2 px-6 rounded-md bg-blue-500 text-white hover:opacity-80 active:opacity-100 transition duration-300 cursor-pointer"
+                     >
+                        Apply Filter
+                     </a>
+                  </div>
                </div>
             </div>
          </div>
